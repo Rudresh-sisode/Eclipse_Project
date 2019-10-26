@@ -1,0 +1,5 @@
+package co.edureka.model;
+
+public class Student {
+
+}

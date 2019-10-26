@@ -1,0 +1,14 @@
+package co.edureka.main;
+
+import co.edureka.model.Student;
+
+public class Client {
+	
+	Student s1=new Student();
+	s1.roll = 101;
+	s1.name ="John"; 
+	s1.email = "john@example.com";
+	s1.age = 23;
+	s1.address ="Jalgaon"; 
+
+}

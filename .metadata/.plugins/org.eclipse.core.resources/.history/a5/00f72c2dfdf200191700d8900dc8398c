@@ -1,0 +1,67 @@
+package co.edureka.main;
+
+import co.edureka.model.Student;
+import javax.xml.parsers.*;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Text;
+
+public class Client {
+	public static void main(String... ars)
+	{
+		Student s1=new Student();
+		s1.roll = 101;
+		s1.name ="John"; 
+		s1.email = "john@example.com";
+		s1.age = 23;
+		s1.address ="Jalgaon"; 
+		
+		
+		//DOM API's
+		
+		
+		try
+		{
+			DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+			DocumentBuilder builder=factory.newDocumentBuilder();
+			Document document=builder.newDocument();
+			
+			Element rootElm=document.createElement("Students");
+			Element studentElm=document.createElement("Student");
+			Element rollElm=document.createElement("120");
+			Element nameElm=document.createElement("soham");
+			Element emailElm=document.createElement("sohamrajput@gmail.com");
+			Element ageElm=document.createElement("21");
+			Element addressElm=document.createElement("Nagpur");
+			
+			//generating the data
+			Text txtRoll=document.createTextNode(String.valueOf(s1.roll));
+			Text txtName=document.createTextNode(s1.name);
+			Text txtEmail=document.createTextNode(s1.email);
+			Text txtAge=document.createTextNode(String.valueOf(s1.age));
+			Text txtAddress=document.createTextNode(s1.address);
+			
+			//setting the data within the tag
+			rollElm.appendChild(txtRoll);
+			nameElm.appendChild(txtName);
+			emailElm.appendChild(txtEmail);
+			ageElm.appendChild(txtAge);
+			addressElm.appendChild(txtAddress);
+			
+			
+			
+			
+			
+		}
+		catch(Exception ex)
+		{
+			
+			System.out.print("error"+ex);
+			
+		}
+	
+	}
+	
+
+}
