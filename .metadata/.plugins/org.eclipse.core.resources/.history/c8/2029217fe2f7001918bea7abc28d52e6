@@ -1,4 +1,5 @@
 package co.edureka.main;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -10,21 +11,21 @@ public class JDBCClient {
 		//Load the driver
 		try {
 			
-			//Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 		System.out.println("Driver loadded first step");
 		
 		//create connection
 		String user="root";
 		String pass="";
-		String url="jdbc:mysql://localhost/edureka?serverTimezone=UTC";
+		String url="jdbc:mysql://localhost/edureka";
 		
 		Connection conn=DriverManager.getConnection(url,user,pass);
 		
-		String sqlQuery="insert into Student values(null,'Soham','sohamerajput@gmail.com',10,'pune')";
+		String sqlQuery="insert into Student values(null,'rudresh','rudranjaput@gmail.com',21,'Jamner'";
 		
 		Statement stmt=conn.createStatement();
-		int i=stmt.executeUpdate(sqlQuery);
-		System.out.println("Rows has been inserted rows "+i);
+		stmt.executeUpdate(sqlQuery);
+		System.out.println("Rows has been inserted");
 		conn.close();
 		stmt.close();
 		

@@ -20,7 +20,7 @@ public class JDBCClient {
 		
 		Connection conn=DriverManager.getConnection(url,user,pass);
 		
-		String sqlQuery="insert into Student values(null,'Soham','sohamerajput@gmail.com',10,'pune')";
+		String sqlQuery="insert into Student values(null,'rudresh','rudranjaput@gmail.com',21,'Jamner')";
 		
 		Statement stmt=conn.createStatement();
 		int i=stmt.executeUpdate(sqlQuery);
