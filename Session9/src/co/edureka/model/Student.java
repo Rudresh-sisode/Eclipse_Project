@@ -21,4 +21,11 @@ public class Student {
 		this.address = address;
 	}
 
+	@Override
+	public String toString() {
+		return "Student [roll=" + roll + ", name=" + name + ", email=" + email + ", age=" + age + ", address=" + address
+				+ "]";
+	}
+	
+
 }
